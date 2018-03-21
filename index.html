@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<title>Eggabeg | Art n Stuff</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.js"></script>
+	<script src="js/returntotop.js"></script>
+</head>
+
+
+<body>
+
+	<!-- Hero Image -->
+	<div class="slider">
+		<h1>Eggabeg</h1>
+	</div>
+
+	<!-- Return to Top -->
+	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+
+	<!-- Header -->
+	<header>
+		<div id="menu-wrapper">
+
+			<ul id="nav-links">
+				<li><a href="#work-anchor">Work</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Page Start -->
+	<div id="wrapper">
+
+
+		<!-- Ahoy -->
+		<div class="slide" id="ahoy">
+			<div class="container">
+				<div class="col-66">
+					<h2>Ahoy</h2>
+					<p>Anime, Manga, Comic and Classical mediums, all while trying to develop a visual style of my own. Whatever the request, gives a buzz and I'll have a go at it!</p>
+				</div>
+				<img src="img/ahoy.png">
+			</div>
+		</div>
+
+		<!-- Work -->
+		<a name="work-anchor"></a>
+
+		<!-- Gallery -->
+		<div class="slide" id="gallery">
+			<div class="container">
+				<h2>Work</h2>
+				<p>A few doodles, prints and concepts for your viewing pleasure</p>
+
+
+
+				<div class="grid">
+					<div class="grid-sizer"></div>
+					<div class="grid-item"><img src="img/gallery/1.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/2.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/3.png"></div>
+					<div class="grid-item"><img src="img/gallery/4.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/5.png"></div>
+					<div class="grid-item"><img src="img/gallery/6.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/7.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/8.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/9.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/10.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/11.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/12.jpg"></div>
+					<div class="grid-item"><img src="img/gallery/14.jpg"></div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="slide" id="work">
+
+
+			<div class="container">
+				<div class="vid-col">
+
+				</div>
+
+				<h3>Animation</h3>
+				<iframe id="showreel" width="560" height="315" src="https://www.youtube.com/embed/vVmyB2oABj0?autoplay=1&controls=0&showinfo=0&loop=1&playlist=vVmyB2oABj0" frameborder="0" allowfullscreen repeat="1"></iframe>
+
+
+			</div>
+
+		</div>
+
+
+		<!-- About -->
+		<a name="about"></a>
+		<div class="slide" id="about">
+			<div class="container">
+				<div class="col-small">
+					<img src="img/raws.png" id="artist-img">
+				</div>
+				<h3>About the Artist</h3>
+				<p>Based in Chippenham and drawing since I could hold a pen, I currently take on commissions and art requests while promoting my work at various conventions throughout the UK.</p>
+				<p>Possible ventures include Patreon and small book publishing in the future.</p>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<div class="slide" id="contact">
+			<div class="container">
+
+				<a href='https://www.facebook.com/Eggabeg/'><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
+				<a href="http://eggabeg.tumblr.com/"><i class="fa fa-tumblr fa-2x fa-fw" aria-hidden="true"></i></a>
+				<a href='mailto:eggabeg@gmail.com'><i class="fa fa-envelope fa-2x fa-fw" aria-hidden="true"></i></a>
+				<img src="img/tiny-demon.png" id="img-float">
+				<p>&copy; Eggabeg 2017</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+
+	</script>
+	<script type="text/javascript">
+		myVid = document.getElementById("showreel");
+		myVid.muted = true;
+
+	</script>
+	<script>
+		var grid = document.querySelector('.grid');
+		var msnry;
+
+		imagesLoaded(grid, function() {
+			// init Isotope after all images have loaded
+			msnry = new Masonry(grid, {
+				itemSelector: '.grid-item',
+				columnWidth: '.grid-sizer',
+				percentPosition: true
+			});
+		});
+
+	</script>
+
+	<script>
+		$(window).scroll(function() {
+			if ($(this).scrollTop() >= 500) { // If page is scrolled more than 50px
+				$('#return-to-top').fadeIn(200); // Fade in the arrow
+			} else {
+				$('#return-to-top').fadeOut(200); // Else fade out the arrow
+			}
+		});
+		$('#return-to-top').click(function() { // When arrow is clicked
+			$('body,html').animate({
+				scrollTop: 0 // Scroll to top of body
+			}, 500);
+		});
+
+	</script>
+
+
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-108696633-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+</body>
+
+</html>
